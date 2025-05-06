@@ -1,0 +1,56 @@
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 10px;
+    height: 100vh;
+    background: linear-gradient(
+        to bottom,
+        #e42929 50%,
+        #16191e 50% 
+    );
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.clock-face {
+    background: #16191e;
+    height: 320px;
+    width: 320px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    box-sizing: content-box;
+    border-radius: 50%;
+    border: 15px solid #242931;
+    box-shadow: 15px 15px 35px rgba(0,0,0,0.2),
+    inset 0 0 30px rgba(0,0,0,0.4);
+}
+
+.hand {
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%) rotate(0deg); /* <- pyöriminen */
+    transform-origin: 50% 100%; /* <- ankkuroi viisarin alapään */
+    transition: all 0.5s;
+}
+
+.hour-hand{
+    height: 90px;
+    width: 10px;
+}
+
+.min-hand{
+    height: 110px;
+    width: 5px;
+}
+
+.second-hand{
+    height: 130px;
+    width: 3px;
+}
